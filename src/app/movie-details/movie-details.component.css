@@ -1,0 +1,17 @@
+.movieDetails {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.movieDetails img {
+  height: 70%;
+}
+
+.movieDetails p {
+  font-size: 16px;
+}
+
+.asside {
+  overflow: hidden;
+}
+/*# sourceMappingURL=movie-details.component.css.map */

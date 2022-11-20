@@ -1,0 +1,23 @@
+
+<div *ngIf = "isLoading == true" class="container ">
+    <div class="row">
+
+        <div class="col-md-9">
+            <div  class="movieDetails" >
+                <img [src]=" imgPrefix + moviesDetails.poster_path" alt="" class="w-100">
+                <h5> {{moviesDetails.original_title}}</h5>
+                <p class="lead"> {{moviesDetails.overview}}</p>
+            </div>
+
+        </div>
+
+
+        <div class="col-md-3 asside" >
+            <div  *ngFor = "let y of assideMovies">
+                <img [src]="imgPrefix + y.poster_path" alt="" class="w-50">
+                <h6>{{y.title}}</h6>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #131722 !important;
+  color: #f8f8f8 !important;
+}
+
+.vote {
+  position: absolute;
+  top: 3%;
+  right: 5%;
+  padding: 8px;
+  font-weight: 600;
+  background-color: #24baef;
+  font-size: 16px;
+}
+
+.movies, .tv {
+  cursor: pointer;
+}
+/*# sourceMappingURL=styles.css.map */

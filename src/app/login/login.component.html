@@ -1,0 +1,32 @@
+<div *ngIf = "err" class="alert alert-danger m-2">
+    {{err}}
+
+</div>
+<form [formGroup] = 'loginForm' class="w-50 m-auto py-5" (ngSubmit) = 'sendData(loginForm)'>
+
+    
+
+
+    <div class="form-group">
+        <label for=""> E-mail :</label>
+        <input [class.is-invalid] = 'loginForm.get("email").invalid == true &&  loginForm.get("email").touched == true' formControlName = "email" type="text" class="form-control">
+        <span *ngIf ='loginForm.get("email").invalid == true &&  loginForm.get("email").touched == true '
+            class="border border-danger p-2 d-block my-2 text-danger">
+        
+             E-mail Not Valid</span>
+    </div>
+
+    <div class="form-group">
+        <label for=""> password :</label>
+        <input [class.is-invalid] ='loginForm.get("password").invalid == true &&  loginForm.get("password").touched == true '  formControlName = "password" type="text" class="form-control">
+        <span *ngIf ='loginForm.get("password").invalid == true &&  loginForm.get("password").touched == true '
+        class="border border-danger p-2 d-block my-2 text-danger"> 
+            password Not Valid</span>
+    </div> 
+
+    <div >
+        <a routerLink ='/register' > register ?</a>
+    </div>
+
+    <button  [disabled] = 'loginForm.invalid == true' class="btn btn-danger" type="submit"> login</button>
+</form>

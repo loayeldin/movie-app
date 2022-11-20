@@ -1,0 +1,25 @@
+
+
+
+<div class="container">
+    <input [(ngModel)]="searchTerm" type="search" name="" id="" class="w-100 form-control m-auto">
+    <div class="row">
+
+       <div *ngFor = 'let movies of trendingmovies|moviesSearch:searchTerm' class=" col-sm-6 col-md-3 py-3 movies">
+            <a [routerLink] = '["/movie-details", movies.id]'>
+
+                <div>
+                    <img [src]="imgPrefix+movies.poster_path" alt="" class="w-100">
+                    <h6> {{movies.title}}</h6>
+                
+                    <div class="vote">
+                        {{movies.vote_average}}
+                    </div>
+                </div>
+
+            </a>
+        </div>
+
+    </div>
+ 
+</div>

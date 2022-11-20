@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+$mainColor : #f8f8f8;
+$secondColor : #ef4836;
+$darkColor: #212121;
+$lightBgColor:#24baef;
+$bgTransparent :rgba(36,186,293,0.6);
+$fontColor:#FFF;
+$borderHeight:1px;
+$boxShadow : 0 5px 13px 0 rgba( 0 , 0 , 0 , 0.1);
+$bgColor:#131722;
+
+body
+{
+    background-color:$bgColor !important;
+    color: $mainColor !important;
+}
+.vote 
+{
+    position: absolute;
+    top: 3%;
+    right:5%;
+    padding:8px;
+    font-weight:600;
+    background-color: $lightBgColor;
+    font-size:16px;
+
+}
+.movies , .tv
+{
+    cursor: pointer;
+}
+a 
+{
+    text-decoration: none !important;
+}
